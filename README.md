@@ -40,9 +40,4 @@ Pass any number of `.evtx` files or glob patterns. The tool prints a summary
 to the console and writes a multi-sheet Excel report (one sheet per detection
 category, plus a summary sheet) to the output path.
 
-## Why these specific detections
 
-Each detector encodes logic a SOC L1 analyst applies manually when triaging
-alerts in a SIEM — grouping failed logons by account within a time window,
-flagging privileged-group membership changes, watching for registry/service/
-scheduled-task persistence, and matching known LOLBin abuse patterns. 
