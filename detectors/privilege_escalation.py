@@ -1,6 +1,6 @@
 """
-detectors/privilege_escalation.py
------------------------------------
+
+
 Detects signs that an account gained more power than it should have.
 
 We watch three Event IDs:
