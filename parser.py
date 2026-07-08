@@ -4,20 +4,7 @@ parser.py
 Reads a raw Windows .evtx log file and converts every event record into a
 simple, flat Python dictionary that the rest of the tool can work with.
 
-Why this exists:
-Windows stores events as XML wrapped inside a binary file format (.evtx).
-Nothing else in this project should have to deal with raw XML - so this
-file is the ONE place that does that translation. Every detector after
-this just works with clean dictionaries like:
 
-{
-    "event_id": 4625,
-    "time": datetime(...),
-    "computer": "MSEDGEWIN10",
-    "TargetUserName": "IEUser",
-    "IpAddress": "10.0.0.5",
-    ...
-}
 """
 
 from Evtx.Evtx import Evtx
