@@ -6,14 +6,6 @@ the Land Binaries). These are legitimate, Microsoft-signed Windows
 executables that attackers abuse to run malicious code while looking
 like normal system activity.
 
-We watch:
-  4688 - Process creation (native Windows Security log)
-  1    - Sysmon Process Create (richer - includes full command line)
-
-Detection logic: flag when a known LOLBin is launched with command-line
-arguments that match a suspicious pattern (e.g. regsvr32 downloading a
-remote scriptlet, rundll32 calling an export function, mshta executing
-inline VBScript).
 """
 
 from mitre_mapping import MITRE
