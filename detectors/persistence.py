@@ -1,15 +1,4 @@
-"""
-detectors/persistence.py
---------------------------
-Detects mechanisms attackers use to survive a reboot / stay in the
-environment long term. Three classic techniques, three Event IDs:
 
-  4698 - A scheduled task was created           -> T1053.005
-  7045 - A new service was installed            -> T1543.003
-  13   - (Sysmon) Registry value set             -> T1547.001
-         We only care about Registry "Run" / "RunOnce" keys, which is
-         the #1 way malware re-launches itself at every logon.
-"""
 
 from mitre_mapping import MITRE
 
