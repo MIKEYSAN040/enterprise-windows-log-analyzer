@@ -23,24 +23,6 @@ often rename tools like `regsvr32.exe` to evade name-based detection, but the
 command-line syntax they need to use rarely changes. See
 `detectors/suspicious_process.py` for details.
 
-## Project Structure
-
-```
-enterprise-windows-log-analyzer/
-├── main.py                      # CLI entry point
-├── parser.py                    # .evtx -> normalized event dicts
-├── mitre_mapping.py             # shared MITRE ATT&CK reference
-├── report.py                    # Excel report generation (OpenPyXL)
-├── detectors/
-│   ├── brute_force.py
-│   ├── privilege_escalation.py
-│   ├── persistence.py
-│   └── suspicious_process.py
-├── sample_logs/                 # real attack-sample .evtx files for testing
-├── output/                      # generated reports land here
-├── test_brute_force.py          # synthetic-data test for the brute force rule
-└── requirements.txt
-```
 
 ## Setup
 
@@ -63,6 +45,4 @@ category, plus a summary sheet) to the output path.
 Each detector encodes logic a SOC L1 analyst applies manually when triaging
 alerts in a SIEM — grouping failed logons by account within a time window,
 flagging privileged-group membership changes, watching for registry/service/
-scheduled-task persistence, and matching known LOLBin abuse patterns. See
-`FOR_MIKEY_HOW_IT_WORKS.md` for a plain-language walkthrough of the whole
-pipeline.
+scheduled-task persistence, and matching known LOLBin abuse patterns. 
