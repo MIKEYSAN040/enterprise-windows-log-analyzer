@@ -3,14 +3,6 @@ detectors/brute_force.py
 -------------------------
 Detects brute force login attempts.
 
-Logic (this is exactly how a SOC analyst would eyeball it in a SIEM):
-1. Filter all events down to Event ID 4625 (An account failed to log on).
-2. Group the failures by (target account, source), because 5 failed
-   logons for 5 DIFFERENT accounts is not brute force, but 5 failures
-   for the SAME account is.
-3. If the number of failures for one account crosses a threshold within
-   a time window, flag it as brute force.
-
 Threshold and window are configurable so you can tune false positives.
 """
 
