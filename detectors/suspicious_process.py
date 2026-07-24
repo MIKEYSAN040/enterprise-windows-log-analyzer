@@ -1,6 +1,6 @@
 """
 detectors/suspicious_process.py
-----------------------------------
+---------------------------------
 Detects suspicious process creation - specifically "LOLBins" (Living Off
 the Land Binaries). These are legitimate, Microsoft-signed Windows
 executables that attackers abuse to run malicious code while looking
