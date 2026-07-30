@@ -1,4 +1,4 @@
-
+   
 
 from mitre_mapping import MITRE
 
