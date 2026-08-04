@@ -1,6 +1,6 @@
 """
 main.py
---------
+-------
 Command-line entry point.
 
 Usage:
